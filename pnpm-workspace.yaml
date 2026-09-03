@@ -75,6 +75,9 @@ onlyBuiltDependencies:
   - unrs-resolver
 
 overrides:
+  # Angular CLI 19.2.27 pins an obsolete pacote release that requests tar 6.
+  # Keep the CLI on its Angular 19 line while using the maintained pacote patch.
+  '@angular/cli>pacote': 20.0.1
   # replit uses linux-x64 only, we can exclude all other platforms
   "esbuild>@esbuild/darwin-arm64": "-"
   "esbuild>@esbuild/darwin-x64": "-"

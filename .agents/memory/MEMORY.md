@@ -1,1 +1,2 @@
 - [Workspace package names](workspace-package-names.md) — managed pnpm workflows require the @workspace namespace.
+- [Angular publishing](angular-publishing.md) — use a non-interactive CLI build with flat browser output for static hosting.

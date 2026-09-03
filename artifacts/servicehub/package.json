@@ -4,9 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite --config vite.config.ts --host 0.0.0.0",
-    "build": "vite build --config vite.config.ts",
-    "serve": "vite preview --config vite.config.ts --host 0.0.0.0",
+    "dev": "NG_CLI_ANALYTICS=false ng serve --host 0.0.0.0 --port $PORT",
+    "build": "NG_CLI_ANALYTICS=false ng build --configuration production",
+    "serve": "NG_CLI_ANALYTICS=false ng serve --host 0.0.0.0 --port $PORT",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@angular/build": "^19.2.0",
-    "@analogjs/vite-plugin-angular": "^1.16.0",
+    "@angular/cli": "^19.2.0",
     "@types/node": "^22.10.0",
     "typescript": "5.8.3",
     "vite": "^6.1.0"
