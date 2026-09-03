@@ -53,6 +53,11 @@
         },
         "serve": {
           "builder": "@angular/build:dev-server",
+          "options": {
+            "allowedHosts": [
+              "1b1ab8a4-994e-4765-8f6d-7619c3414df7-00-89g15ebivgjz.pike.replit.dev"
+            ]
+          },
           "configurations": {
             "production": {
               "buildTarget": "servicehub:build:production"
