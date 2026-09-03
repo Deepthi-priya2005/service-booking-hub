@@ -1,0 +1,1 @@
+- [Workspace package names](workspace-package-names.md) — managed pnpm workflows require the @workspace namespace.

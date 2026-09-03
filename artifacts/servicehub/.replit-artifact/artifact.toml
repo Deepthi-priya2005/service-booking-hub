@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "ServiceHub – Service Booking Platform"
+description = "A responsive Angular service marketplace where people can discover trusted local professionals, book appointments, manage upcoming visits, and keep their profile up to date."
+version = "1.0.0"
+id = "artifacts/servicehub"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 26115
+
+[services.development]
+run = "pnpm --filter @workspace/servicehub run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/servicehub", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/servicehub/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "26115"
+BASE_PATH = "/"

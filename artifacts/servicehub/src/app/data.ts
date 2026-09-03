@@ -1,0 +1,24 @@
+import { Booking, Provider, Review, Service, User } from './models';
+
+export const SERVICES: Service[] = [
+  { id:'cleaning', name:'Home cleaning', category:'Home', description:'A careful reset for kitchens, bathrooms, and the everyday mess.', icon:'HC', basePrice:72, duration:120 },
+  { id:'plumbing', name:'Plumbing repair', category:'Repairs', description:'Leaks, fixtures, and the small emergencies that cannot wait.', icon:'PR', basePrice:95, duration:90 },
+  { id:'electrician', name:'Electrician', category:'Repairs', description:'Safe, tidy help for lights, outlets, and power problems.', icon:'EL', basePrice:110, duration:90 },
+  { id:'handyman', name:'Handyman', category:'Home', description:'The shelf, door, or odd job that has been on your list too long.', icon:'HM', basePrice:80, duration:120 },
+  { id:'moving', name:'Moving help', category:'Moving', description:'Extra hands and a calm plan for getting from here to there.', icon:'MV', basePrice:125, duration:180 },
+  { id:'yard-care', name:'Yard care', category:'Outdoors', description:'Seasonal trimming, cleanups, and gardens that feel looked after.', icon:'YC', basePrice:65, duration:90 },
+  { id:'pet-care', name:'Pet care', category:'Care', description:'Kind, reliable visits for the animals who run the house.', icon:'PC', basePrice:35, duration:60 },
+  { id:'painting', name:'Interior painting', category:'Home', description:'Fresh color, clean lines, and a room that feels new again.', icon:'IP', basePrice:140, duration:240 }
+];
+const r = (id: string, providerId: string, author: string, rating: number, comment: string, date: string): Review => ({ id, providerId, author, rating, comment, date });
+export const PROVIDERS: Provider[] = [
+  { id:'maya-chen', name:'Maya Chen', serviceIds:['cleaning','handyman'], specialty:'Home reset specialist', rating:4.9, reviewCount:128, experience:8, price:78, location:'Riverside · 1.2 mi', avatar:'MC', bio:'I believe a well-kept home gives you back a little of your day. I bring my own supplies, a quiet approach, and a checklist that catches the details.', availableSlots:['Tue · 9:00 AM','Tue · 1:30 PM','Wed · 10:00 AM','Thu · 3:00 PM'], reviews:[r('r1','maya-chen','Elena R.',5,'Maya was thoughtful, fast, and left our kitchen better than I imagined.','May 18, 2024'),r('r2','maya-chen','Jordan P.',5,'Exactly on time and genuinely lovely to work with.','Apr 29, 2024')] },
+  { id:'omar-wright', name:'Omar Wright', serviceIds:['plumbing','electrician','handyman'], specialty:'Licensed home repair', rating:4.8, reviewCount:94, experience:12, price:110, location:'Old Town · 2.4 mi', avatar:'OW', bio:'Twelve years of making home repairs less stressful. I explain the fix before I start, keep the workspace clean, and never surprise you with the bill.', availableSlots:['Mon · 4:00 PM','Wed · 9:30 AM','Fri · 11:00 AM'], reviews:[r('r3','omar-wright','Priya S.',5,'Found the leak quickly and explained every option. No pressure.','Jun 2, 2024'),r('r4','omar-wright','Theo M.',4,'Great work and very clear pricing.','May 13, 2024')] },
+  { id:'lucas-reed', name:'Lucas Reed', serviceIds:['yard-care','moving'], specialty:'Outdoor care & moving', rating:4.7, reviewCount:67, experience:6, price:68, location:'North Loop · 3.1 mi', avatar:'LR', bio:'Strong hands, a good playlist, and a plan for the work. I help neighbors get heavy, messy, and outdoor jobs moving.', availableSlots:['Tue · 8:00 AM','Thu · 8:00 AM','Sat · 10:00 AM'], reviews:[r('r5','lucas-reed','Amir K.',5,'Our move was organized from the first box to the last.','May 23, 2024')] },
+  { id:'sana-patel', name:'Sana Patel', serviceIds:['pet-care','cleaning'], specialty:'Careful home & pet care', rating:5.0, reviewCount:43, experience:5, price:54, location:'Riverside · 1.8 mi', avatar:'SP', bio:'Reliable care for the parts of home that matter most. I send a quick update after every visit so you can breathe easy.', availableSlots:['Mon · 12:00 PM','Wed · 12:00 PM','Sun · 9:00 AM'], reviews:[r('r6','sana-patel','June W.',5,'Sana sent the sweetest update and our dog was clearly smitten.','Jun 8, 2024')] }
+];
+export const INITIAL_BOOKINGS: Booking[] = [
+  { id:'SH-4821', customerName:'Alex Morgan', phone:'(555) 014-9283', serviceId:'cleaning', providerId:'maya-chen', date:'2025-02-18', time:'9:00 AM', address:'18 Willow Street', notes:'Please focus on the kitchen.', status:'upcoming', createdAt:'2025-02-10T10:00:00Z' },
+  { id:'SH-4704', customerName:'Alex Morgan', phone:'(555) 014-9283', serviceId:'plumbing', providerId:'omar-wright', date:'2025-01-22', time:'4:00 PM', address:'18 Willow Street', notes:'', status:'completed', createdAt:'2025-01-15T10:00:00Z' }
+];
+export const INITIAL_USER: User = { name:'Alex Morgan', email:'alex.morgan@example.com', phone:'(555) 014-9283', address:'18 Willow Street', avatar:'AM' };

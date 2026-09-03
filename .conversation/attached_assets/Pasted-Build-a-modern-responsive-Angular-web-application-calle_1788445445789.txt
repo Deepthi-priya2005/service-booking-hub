@@ -1,0 +1,158 @@
+Build a modern, responsive **Angular web application called “ServiceHub – Service Booking Platform”**.
+
+### Goal
+
+Create a real-world platform where users can find and book professionals such as plumbers, electricians, cleaners, AC technicians, carpenters, and appliance repair services.
+
+### Tech
+
+Use only:
+
+* Angular
+* TypeScript
+* HTML
+* CSS
+* Angular Router
+* Reactive Forms
+* Angular Services
+* LocalStorage
+
+Do not use React or Vue.
+
+### Pages
+
+Create these routes:
+
+* `/` – Home
+* `/services` – Browse Services
+* `/services/:id` – Service/Provider Details
+* `/book-service` – Booking Form
+* `/bookings` – My Bookings
+* `/dashboard` – User Dashboard
+* `/profile` – User Profile
+
+### Features
+
+**Home**
+
+* Search services
+* Popular service categories
+* Featured providers
+* Book Now buttons
+
+**Services**
+
+* Service/provider cards
+* Search
+* Filter by category, price and rating
+* Sort by price/rating
+
+**Provider Details**
+
+* Provider name
+* Service
+* Rating
+* Experience
+* Price
+* Location
+* Available time slots
+* Reviews
+* Book Now
+
+**Booking**
+Create a Reactive Form with:
+
+* Customer name
+* Phone
+* Service
+* Provider
+* Date
+* Time
+* Address
+* Notes
+
+Validate required fields and generate a booking ID after submission.
+
+**My Bookings**
+
+* Upcoming bookings
+* Completed bookings
+* Cancelled bookings
+* View booking details
+* Cancel/reschedule booking
+* Update booking status
+
+**Dashboard**
+Show dynamic cards for:
+
+* Total bookings
+* Upcoming bookings
+* Completed bookings
+* Cancelled bookings
+
+Also show the next appointment and recent bookings.
+
+**Profile**
+Allow users to edit and save basic profile information.
+
+### Angular Architecture
+
+Use reusable components such as:
+
+* Navbar
+* Sidebar
+* ServiceCard
+* ProviderCard
+* BookingCard
+* SummaryCard
+* BookingForm
+
+Create services:
+
+* `ServiceService`
+* `ProviderService`
+* `BookingService`
+* `StorageService`
+
+Create TypeScript interfaces for:
+
+* Service
+* Provider
+* Booking
+* User
+* Review
+
+Use Angular Dependency Injection and LocalStorage for data persistence.
+
+### UI
+
+Create a clean, professional service-marketplace design with:
+
+* Responsive layout
+* Modern cards
+* Search/filter UI
+* Status badges
+* Forms with validation
+* Mobile-friendly navigation
+* Good empty states
+
+Add realistic sample data for services, providers, reviews and bookings on first launch. Do not overwrite existing LocalStorage data.
+
+### Important
+
+Make the application **functional, not just a static UI**.
+
+Test:
+
+* Routing
+* Search/filtering
+* Booking creation
+* Booking cancellation
+* Rescheduling
+* Dashboard calculations
+* LocalStorage persistence
+* Responsive design
+
+Fix compilation/runtime errors before finishing.
+
+Also create a short `README.md` explaining the project, features, technologies, and Angular concepts used.
